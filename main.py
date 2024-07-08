@@ -1,17 +1,14 @@
 import speech
 import intent
 import commands
-
+import gemini
 def main():
     while True:
         print("Listening...")
-        command = speech.listen_and_recognize()
-        if command:
-            intent_name = intent.determine_intent(command)
-            if intent_name:
-                commands.execute_command(intent_name)
-            else:
-                print("Sorry, I didn't understand that command.")
+        req = speech.listen_and_recognize()
+        if req:
+            command = gemini.get_command(req)
+            commands.execute_command(command)
 
 if __name__ == "__main__":
     main()
