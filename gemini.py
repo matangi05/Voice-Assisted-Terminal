@@ -42,4 +42,4 @@ def get_command(req):
     )
 
     response = chat_session.send_message(f"Give me only the command i would type in command promt to {req} and not any additon information")
-    return response
+    return response[3:-3]
