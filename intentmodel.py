@@ -5,7 +5,6 @@ from sklearn.pipeline import Pipeline
 import pickle
 
 def train_model():
-    # Load dataset
     data = pd.read_csv("dataset.csv")
     X = data["command"]
     y = data["intent"]
@@ -16,10 +15,8 @@ def train_model():
         ('classifier', LogisticRegression())
     ])
 
-    # Train the model
     model.fit(X, y)
 
-    # Save the model
     with open("intentmodel.pkl", "wb") as f:
         pickle.dump(model, f)
 
