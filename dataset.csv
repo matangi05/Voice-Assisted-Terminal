@@ -1,0 +1,40 @@
+command,intent,terminal_command,input_prompt
+create react app,create_react_app,npx create-react-app {app_name},"Please provide the app name: "
+open file,open_file,notepad.exe {file_name},"Please provide the file name: "
+make directory,create_directory,mkdir {dir_name},"Please provide the directory name: "
+run server,run_server,npm start,
+install package,install_package,npm install {package_name},"Please provide the package name: "
+remove package,remove_package,npm uninstall {package_name},"Please provide the package name: "
+update package,update_package,npm update {package_name},"Please provide the package name: "
+init git repository,init_git_repo,git init,
+commit changes,commit_changes,git commit -m "{commit_message}","Please provide the commit message: "
+push changes,push_changes,git push,
+pull changes,pull_changes,git pull,
+clone repository,clone_repo,git clone {repo_url},"Please provide the repository URL: "
+build project,build_project,npm run build,
+deploy project,deploy_project,npm run deploy,
+check status,check_status,git status,
+list files,list_files,ls,
+navigate to directory,navigate_directory,cd {dir_name},"Please provide the directory name: "
+open terminal,open_terminal,start cmd,
+clear terminal,clear_terminal,cls,
+close terminal,close_terminal,exit,
+list npm packages,list_npm_packages,npm list,
+install global package,install_global_package,npm install -g {package_name},"Please provide the global package name: "
+start python server,start_python_server,python -m http.server {port},"Please provide the port number: "
+install python package,install_python_package,pip install {package_name},"Please provide the Python package name: "
+uninstall python package,uninstall_python_package,pip uninstall {package_name},"Please provide the Python package name: "
+list python packages,list_python_packages,pip list,
+create virtual environment,create_virtual_env,python -m venv {env_name},"Please provide the virtual environment name: "
+activate virtual environment,activate_virtual_env,{env_name}\\Scripts\\activate,"Please provide the virtual environment name: "
+deactivate virtual environment,deactivate_virtual_env,deactivate,
+run python script,run_python_script,python {script_name},"Please provide the Python script name: "
+check node version,check_node_version,node -v,
+check npm version,check_npm_version,npm -v,
+update npm,update_npm,npm install npm@latest -g,
+create vue app,create_vue_app,vue create {app_name},"Please provide the app name: "
+serve vue app,serve_vue_app,npm run serve,
+create angular app,create_angular_app,ng new {app_name},"Please provide the app name: "
+serve angular app,serve_angular_app,ng serve,
+test project,test_project,npm test,
+lint project,lint_project,npm run lint,
