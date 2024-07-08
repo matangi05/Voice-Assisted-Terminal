@@ -19,7 +19,24 @@ generation_config = {
 model = genai.GenerativeModel(
   model_name="gemini-1.5-flash",
   generation_config=generation_config,
-  # safety_settings = Adjust safety settings
+  safety_settings = [
+      {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "threshold": "BLOCK_NONE",
+      },
+      {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "threshold": "BLOCK_NONE",
+      },
+      {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "threshold": "BLOCK_NONE",
+      },
+      {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "threshold": "BLOCK_NONE",
+      },
+  ]
   # See https://ai.google.dev/gemini-api/docs/safety-settings
 )
 
@@ -28,7 +45,7 @@ chat_session = model.start_chat(
   ]
 )
 
-
-response = chat_session.send_message("Give me only the command i would type in command promt to {reqs} and not any additon information".format(reqs = "to start python and print hello world"))
+reqs = input("What do u wish to get done ? : \n")
+response = chat_session.send_message(f"Give me only the command i would type in command promt to {reqs} and not any additon information")
 
 print(response.text)
